@@ -1,0 +1,19 @@
+   {
+      "id"  : {{(cells["ref"].value)}},
+      "lat" : {{(cells["lat"].value)}},
+      "lon" : {{(cells["lon"].value)}},
+      "tags" : {
+               "operator" : {{jsonize(cells["operator"].value)}},
+               "name" : {{jsonize(cells["name"].value)}},
+               "ref:msal" : {{jsonize(cells["ref"].value)}},
+               "ref:vatin" : {{jsonize(cells["ref:vatin"].value)}},
+               "operator" : {{jsonize(cells["operator"].value)}},
+               "start_date" : {{jsonize(cells["start_date"].value)}},
+               "addr:street" : {{jsonize(cells["addr:street"].value)}},
+               "addr:housenumber" : {{jsonize(cells["addr:housenumber"].value)}},
+               "addr:postcode" : {{jsonize(cells["addr:postcode"].value)}},
+               "dispensing" : "yes",
+               "amenity"  : "pharmacy"
+               }
+    }
+
