@@ -553,5 +553,40 @@
     "repeat": false,
     "repeatCount": 10,
     "description": "Text transform on cells in column DESCRIZIONEFARMACIA 2 using expression grel:value.replace(\"Dr.Ssa\",\"dottoressa\").replace(\"Dott.Ssa\",\"dottoressa\").replace(\"Dott.Sse\",\"dottoresse\").replace(\"Dr.Sse\",\"dottoresse\").replace(\"Dott.Ri\",\"dottori\").replace(\"Dott.\",\"dottor\").replace(\"Dr.\",\"dottor\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "DESCRIZIONECOMUNE",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column DESCRIZIONECOMUNE using expression value.toTitlecase()"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "DESCRIZIONECOMUNE",
+    "newColumnName": "addr:city",
+    "description": "Rename column DESCRIZIONECOMUNE to addr:city"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "DESCRIZIONEFARMACIA 2",
+    "newColumnName": "operator",
+    "description": "Rename column DESCRIZIONEFARMACIA 2 to operator"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "LATITUDINE",
+    "description": "Remove column LATITUDINE"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "LONGITUDINE",
+    "description": "Remove column LONGITUDINE"
   }
 ]
